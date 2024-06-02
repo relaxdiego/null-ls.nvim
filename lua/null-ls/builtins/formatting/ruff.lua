@@ -13,7 +13,16 @@ return h.make_builtin({
     filetypes = { "python" },
     generator_opts = {
         command = "ruff",
-        args = { "--fix", "--extend-select", "E,I,PT,SIM,PTH,Q,G,LOG", "-e", "-n", "--stdin-filename", "$FILENAME", "-" },
+        args = {
+            "check",
+            "--fix",
+            "--extend-select", "I,PT,SIM,PTH,Q,G,LOG",
+            "-e",
+            "-n",
+            "--stdin-filename",
+            "$FILENAME",
+            "-",
+        },
         to_stdin = true,
     },
     factory = h.formatter_factory,
