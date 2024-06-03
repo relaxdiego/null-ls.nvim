@@ -14,11 +14,7 @@ return h.make_builtin({
     generator_opts = {
         command = "ruff",
         args = {
-            "check",
-            "--fix",
-            "--extend-select", "I,PT,SIM,PTH,Q,G,LOG",
-            "-e",
-            "-n",
+            "format",
             "--stdin-filename",
             "$FILENAME",
             "-",
